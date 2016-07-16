@@ -1,0 +1,117 @@
+<!doctype html>
+
+<html lang="en">
+  <head>
+	<meta name="description" content="Webpage for Joseph S. Choi">
+	<title>Joseph S. Choi Webpage</title>
+
+	<?php include("includes/header.html"); ?>
+  </head>
+
+  <body>
+    <div class="demo-blog mdl-layout mdl-js-layout has-drawer is-upgraded">
+      <main class="mdl-layout__content">
+        <div class="demo-blog__posts mdl-grid">
+          <div class="mdl-card main-pic mdl-cell mdl-cell--8-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="/about.html">Joseph S. Choi</a></h3>
+            </div>
+            <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong><a href="http://www.optics.rochester.edu" target="_blank">The Institute of Optics</a>, Ph.D.</strong>
+                <span><a href="http://www.rochester.edu" target="_blank">University of Rochester</a>, NY, USA</span>
+              </div>
+            </div>
+          </div>
+          <div class="mdl-card something-else mdl-cell mdl-cell--8-col mdl-cell--4-col-desktop">
+            <button class="mdl-button mdl-js-ripple-effect mdl-js-button mdl-button--fab mdl-color--accent">
+              <i class="material-icons mdl-color-text--white" role="presentation">add</i>
+              <span class="visuallyhidden">add</span>
+            </button>
+            <div class="mdl-card__media mdl-color--white mdl-color-text--grey-600">
+              <a href="/about.html"><img src="/images/logo.png"></a>
+              About Me
+            </div>
+            <div class="mdl-card__supporting-text meta meta--fill mdl-color-text--grey-600">
+              <div>
+                <strong>More...</strong>
+              </div>
+              <ul class="mdl-menu mdl-js-menu mdl-menu--bottom-right" for="menubtn">
+                <li class="mdl-menu__item mdl-js-ripple-effect"><a href="/about.html">About</a></li>
+                <li class="mdl-menu__item mdl-js-ripple-effect"><a href="mailto:joecmama@gmail.com">Contact</a></li>
+				<li class="mdl-menu__item mdl-js-ripple-effect"><a href="http://www.linkedin.com/in/joeschoi" target="_blank">LinkedIn</a></li>
+				<li class="mdl-menu__item mdl-js-ripple-effect"><a href="https://github.com/joecmama" target="_blank">GitHub</a></li>
+				<li class="mdl-menu__item mdl-js-ripple-effect"><a href="/includes/JChoi_CV.pdf" target="_blank">Resume</a></li>
+<!--                 <li class="mdl-menu__item mdl-js-ripple-effect">Favorite</li>
+                <li class="mdl-menu__item mdl-js-ripple-effect">Search</li> -->
+              </ul>
+              <button id="menubtn" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">more_vert</i>
+                <span class="visuallyhidden">show menu</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="mdl-card research mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="research.html">Research</a></h3>
+            </div>
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+              Publications, Presentations, Patents, Tutorials.
+            </div>
+          </div>
+
+          <div class="mdl-card media mdl-cell mdl-cell--12-col">
+            <div class="mdl-card__media mdl-color-text--grey-50">
+              <h3><a href="/media.html">Media</a></h3>
+            </div>
+            <div class="mdl-color-text--grey-600 mdl-card__supporting-text">
+              Media, Press, Videos, ...
+            </div>
+          </div>
+			
+<!--             <div class="mdl-card__supporting-text meta mdl-color-text--grey-600">
+              <div class="minilogo"></div>
+              <div>
+                <strong>The Newist</strong>
+                <span>2 days ago</span>
+              </div>
+            </div> -->
+<!--          <nav class="demo-nav mdl-cell mdl-cell--12-col">
+            <div class="section-spacer"></div>
+            <a href="entry.html" class="demo-nav__button" title="show more">
+              More
+              <button class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon">
+                <i class="material-icons" role="presentation">arrow_forward</i>
+              </button>
+            </a>
+          </nav>
+-->
+        </div>
+
+	<?php include("includes/footer.html"); ?>
+
+      </main>
+      <div class="mdl-layout__obfuscator"></div>
+    </div>
+<!--    <a href="https://github.com/google/material-design-lite/blob/master/templates/blog/" target="_blank" id="view-source" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-color--accent mdl-color-text--accent-contrast">View Source</a>
+-->
+    <script src="../../material.min.js"></script>
+  </body>
+  <script>
+    Array.prototype.forEach.call(document.querySelectorAll('.mdl-card__media'), function(el) {
+      var link = el.querySelector('a');
+      if(!link) {
+        return;
+      }
+      var target = link.getAttribute('href');
+      if(!target) {
+        return;
+      }
+      el.addEventListener('click', function() {
+        location.href = target;
+      });
+    });
+  </script>
+</html>
