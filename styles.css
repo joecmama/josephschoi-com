@@ -244,6 +244,9 @@ body .demo-blog {
 .demo-blog .media .mdl-card__media {
   background-image: url('/media/cloak/i-tKGgh8V-L.jpg');
 }
+.demo-blog .portfolio .mdl-card__media {
+  background-image: url('/includes/portfolio/pacman/index.html');
+}
 .demo-blog .shopping .mdl-card__media {
   background-image: url('/images/shopping.jpg');
 }
@@ -319,6 +322,10 @@ body .demo-blog {
 .demo-blog--blogpost .media > .mdl-card .mdl-card__media {
   background-image: url('/media/cloak/i-gGcB5zd-L.jpg');
   height: 600px;
+}
+.demo-blog--blogpost .portfolio > .mdl-card .mdl-card__media {
+  background-image: url('/includes/portfolio/pacman/index.html');
+  height: 100px;
 }
 .demo-blog--blogpost .comments {
   background-color: #EEE;
